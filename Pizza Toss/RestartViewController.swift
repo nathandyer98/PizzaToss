@@ -2,29 +2,46 @@
 //  RestartViewController.swift
 //  Pizza Toss
 //
-//  Created by nd17aak on 13/01/2020.
+//  Created by nd17aak on 11/01/2020.
 //  Copyright © 2020 nd17aak. All rights reserved.
 //
 
 import UIKit
+import AVFoundation
 
 class RestartViewController: UIViewController {
 
+    var passedScore = ""
+    var endMusic: AVAudioPlayer!
     override func viewDidLoad() {
         super.viewDidLoad()
+        scorePass.text = self.passedScore
+        
+        func playMusic() {
+            guard let url = Bundle.main.url(forResource: "endMusic", withExtension: "mp3") else { return }
 
-        // Do any additional setup after loading the view.
+            do {
+                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+                try AVAudioSession.sharedInstance().setActive(true)
+                endMusic = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+                guard let endMusic = endMusic else { return }
+                endMusic.play()
+
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    playMusic()
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func startButton(_ sender: Any) {
+        endMusic.stop()
     }
-    */
-
+    @IBAction func playAgainButton(_ sender: Any) {
+        endMusic.stop()
+    }
+    @IBOutlet weak var scorePass: UILabel!
+    
 }

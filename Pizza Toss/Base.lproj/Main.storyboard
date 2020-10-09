@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkY-KA-w62">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GradoGradooNF.ttf">
+            <string>GradoGradooNF</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Front Page View Controller-->
+        <scene sceneID="yef-OC-pmN">
+            <objects>
+                <viewController id="2UV-Ce-Shm" customClass="FrontPageViewController" customModule="Pizza_Toss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Amq-6l-hDR">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="DFl-ru-ibE" userLabel="Background">
+                                <rect key="frame" x="0.0" y="-50" width="667" height="474"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ghz-jK-bww" userLabel="Foreground">
+                                <rect key="frame" x="-20" y="-60" width="687" height="453"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kgo-ZG-9tu" userLabel="Logo">
+                                <rect key="frame" x="203" y="89" width="236" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylt-EU-66O">
+                                <rect key="frame" x="-139" y="314" width="87" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Lh-Up-kIy">
+                                <rect key="frame" x="-44" y="339" width="43" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qy-eh-pG2">
+                                <rect key="frame" x="279" y="290" width="109" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="playbutton.png"/>
+                                <connections>
+                                    <action selector="playButton:" destination="2UV-Ce-Shm" eventType="touchUpInside" id="4Up-1e-jpE"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="tvA-HN-u4u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DxS-SI-N6G"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pr9-VL-TaF"/>
+                    <connections>
+                        <outlet property="catRun" destination="ylt-EU-66O" id="w1H-cb-658"/>
+                        <outlet property="ratRun" destination="0Lh-Up-kIy" id="6Oz-EZ-klM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lm3-sS-AvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132.68365817091455" y="-738.39999999999998"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pizza_Toss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shop.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aFF-Rm-e0W" userLabel="InsideBackground">
+                                <rect key="frame" x="0.0" y="-99" width="667" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aim.png" translatesAutoresizingMaskIntoConstraints="NO" id="gLG-dZ-Het" userLabel="Target Image" customClass="DragImageView" customModule="Pizza_Toss" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="156" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lg-YZ-OI0" userLabel="Score Label">
+                                <rect key="frame" x="20" y="20" width="142" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBK-hF-NS7" userLabel="Timer Label">
+                                <rect key="frame" x="309" y="347" width="48" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scat1.png" translatesAutoresizingMaskIntoConstraints="NO" id="kPr-s2-0cT">
+                                <rect key="frame" x="272" y="267" width="78" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRM-2N-o0h" userLabel="Timer Label">
+                                <rect key="frame" x="3" y="347" width="83" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqi-hb-B5g" userLabel="Timer Label">
+                                <rect key="frame" x="20" y="66" width="86" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Szt-jU-dag"/>
+                    <connections>
+                        <outlet property="ScoreLabel" destination="0lg-YZ-OI0" id="q4U-qV-mxc"/>
+                        <outlet property="TargetImage" destination="gLG-dZ-Het" id="U3F-NQ-C0m"/>
+                        <outlet property="TimerLabel" destination="zBK-hF-NS7" id="Nkg-SO-9lI"/>
+                        <outlet property="sleepCat" destination="kPr-s2-0cT" id="sGf-WD-Esp"/>
+                        <segue destination="6zg-aK-dPz" kind="presentation" identifier="passScore" id="DwN-ZL-kN7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132.68365817091455" y="157.59999999999999"/>
+        </scene>
+        <!--Restart View Controller-->
+        <scene sceneID="EFV-TY-1FO">
+            <objects>
+                <viewController storyboardIdentifier="restartPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zg-aK-dPz" customClass="RestartViewController" customModule="Pizza_Toss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afw-cA-lcr">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="endscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gfh-uD-0Hy" userLabel="EndScreenBackground">
+                                <rect key="frame" x="-14" y="-28" width="694" height="403"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mc-2L-0qd">
+                                <rect key="frame" x="390" y="273" width="123" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button" image="start.png"/>
+                                <connections>
+                                    <action selector="startButton:" destination="6zg-aK-dPz" eventType="touchUpInside" id="BIz-jc-7GT"/>
+                                    <segue destination="2UV-Ce-Shm" kind="show" id="U9U-cW-jpP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4H-uf-0Nw">
+                                <rect key="frame" x="121" y="270" width="170" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button" image="playagain.png"/>
+                                <connections>
+                                    <action selector="playAgainButton:" destination="6zg-aK-dPz" eventType="touchUpInside" id="Sea-fz-ZBb"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="oxU-oe-i4Q"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gameover.png" translatesAutoresizingMaskIntoConstraints="NO" id="4M9-Uv-0mo">
+                                <rect key="frame" x="103" y="20" width="460" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="closedsign.png" translatesAutoresizingMaskIntoConstraints="NO" id="ka6-0U-vr6">
+                                <rect key="frame" x="58" y="108" width="233" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4H-ws-57x">
+                                <rect key="frame" x="287" y="207" width="92" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bhX-UQ-0Ye"/>
+                    </view>
+                    <connections>
+                        <outlet property="scorePass" destination="c4H-ws-57x" id="l8Z-KA-Krx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ju-DB-TeE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-589" y="1039"/>
+        </scene>
+        <!--Second Stage View Controller-->
+        <scene sceneID="UN0-Xs-Sdi">
+            <objects>
+                <viewController storyboardIdentifier="secondStage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kbr-5t-Oo6" customClass="SecondStageViewController" customModule="Pizza_Toss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fjZ-6N-hJN">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shop.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XcA-Tn-erF" userLabel="InsideBackground">
+                                <rect key="frame" x="0.0" y="-99" width="667" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aim.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eun-b8-Lt4" userLabel="Target Image" customClass="DragImageView" customModule="Pizza_Toss" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="156" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="SecondStage" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfU-Iq-5hJ" userLabel="Score Label">
+                                <rect key="frame" x="20" y="20" width="142" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scat1.png" translatesAutoresizingMaskIntoConstraints="NO" id="CCJ-FI-tS8">
+                                <rect key="frame" x="272" y="267" width="78" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuK-OH-VcZ" userLabel="Timer Label">
+                                <rect key="frame" x="3" y="347" width="83" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiQ-QM-h2C" userLabel="Timer Label">
+                                <rect key="frame" x="309" y="347" width="48" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ8-Xt-Ffv" userLabel="Timer Label">
+                                <rect key="frame" x="20" y="66" width="86" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hI8-j6-D3k"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zFe-4Z-hii"/>
+                    <connections>
+                        <outlet property="ScoreLabel" destination="XfU-Iq-5hJ" id="Vyp-Yp-GmE"/>
+                        <outlet property="TargetImage" destination="Eun-b8-Lt4" id="VrG-Ll-n6X"/>
+                        <outlet property="TimerLabel" destination="BiQ-QM-h2C" id="lOB-WQ-pc6"/>
+                        <outlet property="sleepCat" destination="CCJ-FI-tS8" id="xqt-fK-Upa"/>
+                        <segue destination="6zg-aK-dPz" kind="presentation" identifier="passingScore" id="fCJ-rI-4ud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2G-rc-Bxc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="1038"/>
+        </scene>
+        <!--Third Stage View Controller-->
+        <scene sceneID="Usu-JO-7Y5">
+            <objects>
+                <viewController storyboardIdentifier="thirdStage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QO2-wx-unm" customClass="ThirdStageViewController" customModule="Pizza_Toss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f5V-d3-MxU">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shop.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7my-oR-UrR" userLabel="InsideBackground">
+                                <rect key="frame" x="0.0" y="-99" width="667" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aim.png" translatesAutoresizingMaskIntoConstraints="NO" id="DkT-aJ-9oV" userLabel="Target Image" customClass="DragImageView" customModule="Pizza_Toss" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="156" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="SecondStage" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weE-1P-aw3" userLabel="Score Label">
+                                <rect key="frame" x="20" y="20" width="142" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZi-LC-z2W" userLabel="Timer Label">
+                                <rect key="frame" x="309" y="347" width="48" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scat1.png" translatesAutoresizingMaskIntoConstraints="NO" id="57D-ay-bKg">
+                                <rect key="frame" x="272" y="267" width="78" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRP-Cy-eZP" userLabel="Timer Label">
+                                <rect key="frame" x="3" y="347" width="83" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDT-6p-uHf" userLabel="Timer Label">
+                                <rect key="frame" x="20" y="66" width="86" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="MvR-oJ-aJ0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2j1-6r-g3j"/>
+                    <connections>
+                        <outlet property="ScoreLabel" destination="weE-1P-aw3" id="Hyh-Fj-Z6m"/>
+                        <outlet property="TargetImage" destination="DkT-aJ-9oV" id="dLf-fJ-nq5"/>
+                        <outlet property="TimerLabel" destination="qZi-LC-z2W" id="avX-g6-QeB"/>
+                        <outlet property="sleepCat" destination="57D-ay-bKg" id="Gsb-nt-lzM"/>
+                        <segue destination="HkY-KA-w62" kind="presentation" identifier="passingScore" id="1D1-Yc-YeF"/>
+                        <segue destination="6zg-aK-dPz" kind="presentation" identifier="passingScore3" id="fgh-31-oJT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0M-pD-a57" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="1868"/>
+        </scene>
+        <!--Finished View Controller-->
+        <scene sceneID="b9Z-dt-1ZH">
+            <objects>
+                <viewController storyboardIdentifier="endPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HkY-KA-w62" customClass="FinishedViewController" customModule="Pizza_Toss" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dWW-53-bjq">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="be590639f16f4f8d99f3887529b425d2-0.png" translatesAutoresizingMaskIntoConstraints="NO" id="N3t-hQ-ayO" userLabel="Win Anim">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20350515842437744" green="0.39040598273277283" blue="0.50289595127105713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tie-5d-Npc">
+                                <rect key="frame" x="390" y="273" width="123" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button" image="start.png"/>
+                                <connections>
+                                    <action selector="startButton:" destination="HkY-KA-w62" eventType="touchUpInside" id="5Xt-wi-YAg"/>
+                                    <segue destination="2UV-Ce-Shm" kind="show" id="nKj-tU-MM5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7D-1N-qlw">
+                                <rect key="frame" x="121" y="270" width="170" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button" image="playagain.png"/>
+                                <connections>
+                                    <action selector="playAgainButton:" destination="HkY-KA-w62" eventType="touchUpInside" id="ht8-3W-NpF"/>
+                                    <segue destination="2UV-Ce-Shm" kind="show" id="xuh-Mk-vqc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxV-hz-OKC">
+                                <rect key="frame" x="287" y="207" width="92" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpe-3m-rq8">
+                                <rect key="frame" x="8" y="0.0" width="670" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="95"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Finished The Game!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWc-0G-rnB">
+                                <rect key="frame" x="105" y="121" width="457" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GradoGradooNF" family="Grado Gradoo NF" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="i3y-wD-sIS"/>
+                    </view>
+                    <connections>
+                        <outlet property="scorePass" destination="rxV-hz-OKC" id="dDR-TD-dQK"/>
+                        <outlet property="winAnim" destination="N3t-hQ-ayO" id="B2u-zg-bfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfz-Ck-83Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590.55472263868069" y="1868"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="aim.png" width="256" height="256"/>
+        <image name="background.png" width="449.760009765625" height="313"/>
+        <image name="background1.png" width="450.72000122070312" height="288"/>
+        <image name="be590639f16f4f8d99f3887529b425d2-0.png" width="756" height="600"/>
+        <image name="closedsign.png" width="398.8800048828125" height="203.52000427246094"/>
+        <image name="endscreen.png" width="429.60000610351562" height="258.72000122070312"/>
+        <image name="gameover.png" width="742" height="128"/>
+        <image name="logo.png" width="611" height="112"/>
+        <image name="playagain.png" width="667" height="121"/>
+        <image name="playbutton.png" width="545" height="166"/>
+        <image name="scat1.png" width="515" height="289"/>
+        <image name="shop.jpg" width="1000" height="780"/>
+        <image name="start.png" width="355" height="114"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fgh-31-oJT"/>
+        <segue reference="oxU-oe-i4Q"/>
+        <segue reference="nKj-tU-MM5"/>
+    </inferredMetricsTieBreakers>
+</document>

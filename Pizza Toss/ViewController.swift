@@ -9,8 +9,12 @@
 import UIKit
 import AVFoundation
 
+protocol subviewDelegate {
+    func createBall()
+    func BallAngle(currentLocation: CGPoint)
+}
 
-class SecondStageViewController: UIViewController, subviewDelegate {
+class ViewController: UIViewController, subviewDelegate {
     
     var gameMusic: AVAudioPlayer?
     var throwSound: AVAudioPlayer?
@@ -97,7 +101,6 @@ class SecondStageViewController: UIViewController, subviewDelegate {
         collisionBehavior.addBoundary(withIdentifier: "LEFTBOUNDARY" as NSCopying, from: CGPoint(x: self.W*0.0, y: self.H*0.0), to: CGPoint(x: self.W*0.0, y: self.H*1.0))
         collisionBehavior.addBoundary(withIdentifier: "TOPBOUNDARY" as NSCopying, from: CGPoint(x: self.W*0.0, y: self.H*0.0), to: CGPoint(x: self.W*1.0, y: self.H*0.0))
         collisionBehavior.addBoundary(withIdentifier: "BOTTOMBOUNDARY" as NSCopying, from: CGPoint(x: self.W*0.0, y: self.H*1.0), to: CGPoint(x: self.W*1.0, y: self.H*1.0))
-        collisionBehavior.addBoundary(withIdentifier: "OBSTACLEBOUNDARY" as NSCopying, from: CGPoint(x: self.W*0.5, y: self.H*0.3), to: CGPoint(x: self.W*0.65, y: self.H*0.6))
         dynamicAnimator.addBehavior(collisionBehavior)
         
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.countDown), userInfo: nil, repeats: true)
@@ -168,7 +171,6 @@ class SecondStageViewController: UIViewController, subviewDelegate {
     func startUp(){
         
         playMusic()
-        createObstacle()
         
         TargetImage.myDelegate = self
         
@@ -216,7 +218,7 @@ class SecondStageViewController: UIViewController, subviewDelegate {
         
         if(countdown == 0){
             time.invalidate()
-            if (scoreInt >= 10){
+            if (scoreInt >= 20){
                 gameMusic?.stop()
                 nextStage()
             }
@@ -226,15 +228,6 @@ class SecondStageViewController: UIViewController, subviewDelegate {
                 gameOver()
             }
         }
-    }
-    
-    func createObstacle() {
-        let obstacleImage = UIImageView(image: nil)
-        obstacleImage.image = UIImage(named: "signObstacle")
-        obstacleImage.frame = CGRect(x: W*0.55, y: H*0.3, width: W*0.13, height: H*0.2)
-        self.view.addSubview(obstacleImage)
-        self.view.bringSubviewToFront(obstacleImage)
-        
     }
     
     func playMusic() {
@@ -268,7 +261,7 @@ class SecondStageViewController: UIViewController, subviewDelegate {
     }
     
     func gameOver(){
-        performSegue(withIdentifier: "passingScore", sender: self)
+        performSegue(withIdentifier: "passScore", sender: self)
         let main = UIStoryboard(name: "Main", bundle: nil)
         let restart = main.instantiateViewController(withIdentifier: "restartPage")
         self.present(restart, animated: true, completion: nil)
@@ -277,7 +270,7 @@ class SecondStageViewController: UIViewController, subviewDelegate {
     func nextStage(){
         //performSegue(withIdentifier: "passScore", sender: self)
         let main = UIStoryboard(name: "Main", bundle: nil)
-        let next = main.instantiateViewController(withIdentifier: "thirdStage")
+        let next = main.instantiateViewController(withIdentifier: "secondStage")
         self.present(next, animated: true, completion: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
